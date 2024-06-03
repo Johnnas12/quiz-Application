@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext,  useState, useEffect } from 'react';
+// import { ResultContext } from '../context';
+import { UseResultContext } from '../context';
 import axios from 'axios';
 const QuizManager = () => {
     const [question, setQuestion] = useState('');
     const [options, setOptions] = useState('');
     const [correctAnswer, setCorrectAnswer] = useState('');
+  
   
     const handleSubmit = async (e) => {
       e.preventDefault();
