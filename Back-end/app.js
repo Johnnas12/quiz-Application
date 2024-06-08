@@ -10,7 +10,6 @@ app.use(cors());
 app.use(express.json());
 
 
-// Use the db object to fetch quiz questions
 
 app.get('/api/quiz-questions', async (req, res) => {
   try {
@@ -29,9 +28,6 @@ app.post('/api/quiz-questions', async (req, res) => {
 
     const db = await connect();
     const quizQuestions =  db.collection('quiz_questions');
-
-
-    //const quizQuestions = await db.collection('quiz_questions'); 
     const { question, options, correctAnswer } = req.body;
     console.log(req.body);
     const newQuizQuestion = { question, options, correctAnswer };
@@ -42,10 +38,7 @@ app.post('/api/quiz-questions', async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(400).json({ error: 'Failed to create a new quiz question' });
-
   }
-
-
 });
 
 app.listen(port, () => {

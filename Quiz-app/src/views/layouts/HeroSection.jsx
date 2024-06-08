@@ -8,7 +8,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="relative flex flex-col items-center justify-center min-h-screen text-white text-center p-6" style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?exam')" }}>
+    <section id="hero" className="relative flex flex-col items-center justify-center min-h-screen text-white text-center p-6" style={{ backgroundImage: "url('/img/quiz.jpg')",   backgroundSize: 'cover', 
+    backgroundPosition: 'center' }}>
+    {/* <section id="hero" className="relative flex flex-col items-center justify-center min-h-screen text-white text-center p-6" style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?exam')" }}> */}
+
       <div className="bg-black bg-opacity-50 p-8 rounded-lg">
         <h1 className="text-4xl mb-4">Welcome to the Quiz App</h1>
         <p className="text-lg mb-6">Test your knowledge with our fun quizzes!</p>
