@@ -1,12 +1,11 @@
 const express = require('express');
-const {connect} = require('./server'); // Import the database object
+const {connect} = require('./server'); 
 const QuizQuestion = require('./Models/QuizQuestion');
 const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors());
-// Middleware to parse JSON request bodies
 app.use(express.json());
 
 
